@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+SELECT T.ANIMAL_ID
+     , T.NAME
+  FROM (
+        SELECT O.ANIMAL_ID, O.NAME
+          FROM ANIMAL_OUTS O 
+         INNER JOIN ANIMAL_INS I
+            ON O.ANIMAL_ID = I.ANIMAL_ID
+         ORDER BY DATEDIFF(O.DATETIME, I.DATETIME) DESC
+         LIMIT 2
+        ) AS T

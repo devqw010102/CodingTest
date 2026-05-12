@@ -1,2 +1,2 @@
-a, b = map(int, input().strip().split(' '))
-print('%d + %d = %d' %(a, b, a + b))
+a, b = map(int, input().split(' '))
+print(f'%d + %d = %d' %(a, b, a + b))
